@@ -49,8 +49,6 @@ class LetterCell: UICollectionViewCell {
    // Checkpoint: After finishing this exercise, you should now see that the board is accurately colored based on your guess! If it's not working, make sure you have done this exercise correctly.
    */
   func set(style: LetterCellStyle) {
-    // START YOUR CODE HERE
-    // ...
-    // END YOUR CODE HERE
+     // Set style here
   }
 }

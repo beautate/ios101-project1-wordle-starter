@@ -17,7 +17,9 @@ class KeyboardController: NSObject,
     ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
     ["Z", "X", "C", "V", "B", "N", "M", DELETE_KEY]
   ]
-  var didSelectString: ((String) -> Void)?
+  //Closure should exist in keyboardcontroller and be invoked in viewcontroller
+    var didSelectString: ((String) -> Void)?
+    
 
   init(collectionView: UICollectionView) {
     super.init()
@@ -36,10 +38,7 @@ class KeyboardController: NSObject,
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeyboardCell",
                                                   for: indexPath) as! KeyboardCell
     cell.configure(with: keyboardRows[indexPath.section][indexPath.row])
-    // Exercise 4: Pass in the `didSelectString` closure to the KeyboardCell's corresponding property
-    // START YOUR CODE HERE
-    // ...
-    // END YOUR CODE HERE
+      cell.didSelectString = didSelectString
     return cell
   }
 
