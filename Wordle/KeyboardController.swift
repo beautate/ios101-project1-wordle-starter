@@ -29,7 +29,7 @@ class KeyboardController: NSObject,
 
   func collectionView(_ collectionView: UICollectionView,
                       numberOfItemsInSection section: Int) -> Int {
-    // Exercise 1: Return the correct number of items in a section
+    //Return the correct number of items in a section
       return numItems(in: section)
   }
 
